@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtres</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="wireframe/logo.png" alt="Logo" class="logo">
+            <h1>Filtres</h1>
+        </header>
+        <main class="form-page">
+            <form action="search.html" method="get">
+                <div class="form-group">
+                    <label for="price-min">Prix minimum</label>
+                    <input type="number" id="price-min" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label for="price-max">Prix maximum</label>
+                    <input type="number" id="price-max" placeholder="999999">
+                </div>
+                <div class="form-group">
+                    <label for="location">Localisation</label>
+                    <input type="text" id="location" placeholder="Ville ou code postal">
+                </div>
+                <div class="form-group">
+                    <label for="radius">Rayon (km)</label>
+                    <input type="range" id="radius" min="1" max="100" value="50">
+                    <span id="radius-value">50 km</span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="new-only">
+                        Articles neufs uniquement
+                    </label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="delivery-only">
+                        Livraison possible
+                    </label>
+                </div>
+                <button type="submit" class="button">Appliquer les filtres</button>
+                <button type="reset" class="button button-secondary">Réinitialiser</button>
+            </form>
+        </main>
+        <nav class="bottom-nav">
+            <a href="homepage.html" class="nav-link">
+                <img src="wireframe/home-icon.png" alt="Accueil">
+                <span>Accueil</span>
+            </a>
+            <a href="search.html" class="nav-link active">
+                <img src="wireframe/search-icon.png" alt="Recherche">
+                <span>Recherche</span>
+            </a>
+            <a href="new-listing.html" class="nav-link add-btn">
+                <img src="wireframe/add-icon.png" alt="Ajouter">
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <span>Favoris</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <img src="wireframe/user-icon.png" alt="Profil">
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="wireframe/logo.png" alt="Logo" class="logo">
+            <h1>Créer un compte</h1>
+        </header>
+        <main class="form-page">
+            <form action="homepage.html" method="get">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="Votre mot de passe" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm-password" placeholder="Confirmez votre mot de passe" required>
+                </div>
+                <button type="submit" class="button">Créer mon compte</button>
+            </form>
+            <div class="form-footer">
+                <p>Déjà membre ? <a href="login.html">Se connecter</a></p>
+            </div>
+        </main>
+        <nav class="bottom-nav">
+            <a href="search.html" class="nav-link">
+                <img src="wireframe/search-icon.png" alt="Recherche">
+                <span>Recherche</span>
+            </a>
+            <a href="login.html" class="nav-link">
+                <img src="wireframe/message-icon.png" alt="Messages">
+                <span>Messages</span>
+            </a>
+            <a href="login.html" class="nav-link add-btn">
+                <img src="wireframe/add-icon.png" alt="Ajouter">
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <span>Favoris</span>
+            </a>
+            <a href="login.html" class="nav-link">
+                <img src="wireframe/user-icon.png" alt="Profil">
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

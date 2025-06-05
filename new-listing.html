@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une annonce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="javascript:history.back()" class="back-btn">
+                <img src="wireframe/back-icon.png" alt="Retour">
+            </a>
+            <h1>Nouvelle annonce</h1>
+        </header>
+        <main class="form-page">
+            <form action="product-owner.html" method="get">
+                <div class="form-group">
+                    <label for="title">Titre de l'annonce</label>
+                    <input type="text" id="title" placeholder="Titre descriptif" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Catégorie</label>
+                    <div class="category-selector">
+                        <a href="select-category.html" class="button button-secondary">Choisir une catégorie</a>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Prix (€)</label>
+                    <input type="number" id="price" placeholder="0" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Photos</label>
+                    <div class="photo-upload">
+                        <div class="upload-placeholder">
+                            <img src="wireframe/camera-icon.png" alt="Ajouter photo">
+                            <span>Ajouter des photos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="5" placeholder="Décrivez votre article en détail"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Localisation</label>
+                    <input type="text" id="location" placeholder="Ville ou code postal">
+                </div>
+                
+                <button type="submit" class="button">Publier l'annonce</button>
+            </form>
+        </main>
+        
+        <nav class="bottom-nav">
+            <a href="homepage.html" class="nav-link">
+                <img src="wireframe/home-icon.png" alt="Accueil">
+                <span>Accueil</span>
+            </a>
+            <a href="search.html" class="nav-link">
+                <img src="wireframe/search-icon.png" alt="Recherche">
+                <span>Recherche</span>
+            </a>
+            <a href="new-listing.html" class="nav-link add-btn active">
+                <img src="wireframe/add-icon.png" alt="Ajouter">
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <span>Favoris</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <img src="wireframe/user-icon.png" alt="Profil">
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

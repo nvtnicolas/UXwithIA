@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Vendeur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="javascript:history.back()" class="back-btn">
+                <img src="wireframe/back-icon.png" alt="Retour">
+            </a>
+            <h1>Profil Vendeur</h1>
+        </header>
+        <main>
+            <div class="profile-header">
+                <img src="wireframe/user-placeholder.png" alt="Photo de profil" class="profile-img">
+                <h2>Jean Dupont</h2>
+                <span class="user-rating">★★★★☆ 4.7</span>
+            </div>
+            
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-number">56</span>
+                    <span class="stat-label">Annonces</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">Ventes</span>
+                </div>
+            </div>
+
+            <div class="seller-actions">
+                <a href="chat.html" class="button">Contacter</a>
+                <button class="button button-secondary favorite-seller-btn">
+                    <img src="wireframe/fav-icon.png" alt="Favoris"> Ajouter aux favoris
+                </button>
+            </div>
+
+            <div class="seller-reviews">
+                <h3>Avis (15)</h3>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">Sophie L.</span>
+                        <span class="review-rating">★★★★★</span>
+                    </div>
+                    <p class="review-text">Vendeur sérieux et réactif. Article conforme à la description. Je recommande !</p>
+                    <span class="review-date">Il y a 2 semaines</span>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">Marc P.</span>
+                        <span class="review-rating">★★★★☆</span>
+                    </div>
+                    <p class="review-text">Bonne transaction, produit en bon état.</p>
+                    <span class="review-date">Il y a 1 mois</span>
+                </div>
+            </div>
+
+            <div class="seller-products">
+                <h3>Autres annonces de ce vendeur</h3>
+                <div class="horizontal-scroll">
+                    <div class="listing">
+                        <img src="wireframe/item-placeholder.png" alt="Annonce 1" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Enceinte Bluetooth</span>
+                            <span class="listing-price">45 €</span>
+                        </div>
+                    </div>
+                    <div class="listing">
+                        <img src="wireframe/item-placeholder.png" alt="Annonce 2" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Manette PS5</span>
+                            <span class="listing-price">40 €</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <nav class="bottom-nav">
+            <a href="search.html" class="nav-link">
+                <img src="wireframe/search-icon.png" alt="Recherche">
+                <span>Recherche</span>
+            </a>
+            <a href="messages.html" class="nav-link">
+                <img src="wireframe/message-icon.png" alt="Messages">
+                <span>Messages</span>
+            </a>
+            <a href="new-listing.html" class="nav-link add-btn">
+                <img src="wireframe/add-icon.png" alt="Ajouter">
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <span>Favoris</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <img src="wireframe/user-icon.png" alt="Profil">
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

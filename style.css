@@ -1,19 +1,23 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f7f7f7;
+    background: #F5F5F5; /* Gris clair comme Craigslist */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .app-container {
-    max-width: 400px;
+    width: 100%;
+    max-width: 414px; /* iPhone Plus width - standard mobile size */
     margin: 0 auto;
     background: #fff;
     min-height: 100vh;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative; /* Ajouté */
-    overflow: hidden;   /* Ajouté pour éviter le débordement */
+    position: relative;
+    overflow: hidden;
 }
 header {
-    background: #0078d7;
+    background: #5F4BB6; /* Couleur principale Craigslist */
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -27,7 +31,7 @@ header {
 }
 .search-bar {
     display: flex;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 .search-bar input {
     flex: 1;
@@ -37,7 +41,7 @@ header {
     border-right: none;
 }
 .icon-btn {
-    background: #0078d7;
+    background: #5F4BB6; /* Couleur principale Craigslist */
     border: none;
     border-radius: 0 8px 8px 0;
     padding: 0.75rem;
@@ -50,12 +54,12 @@ header {
 .cta-buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 .button {
     flex: 1;
     padding: 1rem;
-    background: #0078d7;
+    background: #5F4BB6; /* Couleur principale Craigslist */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -64,14 +68,18 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
-.featured-listings {
+main {
+    padding: 0 1rem;
+    padding-bottom: 70px; /* Espace pour la navigation */
+}
+.featured-listings, .trending-listings, .personal-listings {
     margin-top: 2rem;
 }
 .listing {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    background: #f0f0f0;
+    background: #F5F5F5; /* Gris clair Craigslist */
     border-radius: 8px;
     padding: 0.5rem;
 }
@@ -88,13 +96,14 @@ header {
 }
 .listing-title {
     font-weight: bold;
+    color: #333;
 }
 .listing-price {
-    color: #0078d7;
+    color: #5F4BB6; /* Couleur principale Craigslist */
 }
 /* Barre de navigation en bas */
 .bottom-nav {
-    position: absolute;      /* Modifié de fixed à absolute */
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -106,30 +115,24 @@ header {
     height: 60px;
     z-index: 100;
 }
-
 .nav-link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #0078d7;
+    color: #5F4BB6; /* Couleur principale Craigslist */
     text-decoration: none;
     font-size: 0.85rem;
     flex: 1;
     padding: 0.3rem 0;
 }
-
 .nav-link img {
     width: 24px;
     height: 24px;
     margin-bottom: 2px;
 }
-main {
-    padding-bottom: 70px; /* Ajouté pour laisser la place à la nav */
-}
-
 /* Met en avant le bouton ajouter dans la nav */
 .add-btn {
-    background: #0078d7;
+    background: #5F4BB6; /* Couleur principale Craigslist */
     border-radius: 50%;
     width: 56px;
     height: 56px;
@@ -145,6 +148,344 @@ main {
     width: 32px;
     height: 32px;
 }
-.trending-listings, .personal-listings {
+/* Styles pour les formulaires */
+.form-page {
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-footer {
     margin-top: 2rem;
+    text-align: center;
+}
+
+.form-footer a {
+    color: #5F4BB6;
+    text-decoration: none;
+}
+
+/* Options de filtre */
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background: #F5F5F5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Style pour onglet actif dans nav */
+.nav-link.active {
+    color: #5F4BB6;
+    font-weight: bold;
+}
+
+/* Style pour la localisation */
+.listing-location {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Style pour le bouton retour */
+.back-btn {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.back-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Style pour les onglets */
+.tab-buttons {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem;
+    background: #fff;
+    border-bottom: 2px solid #ddd;
+    color: #666;
+    text-decoration: none;
+}
+
+.tab-btn.active {
+    color: #5F4BB6;
+    border-bottom: 2px solid #5F4BB6;
+    font-weight: bold;
+}
+
+/* Style pour les conversations */
+.message-item {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 1rem;
+}
+
+.message-info {
+    flex: 1;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.message-time {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.message-preview {
+    margin: 0 0 0.25rem;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-reference {
+    font-size: 0.85rem;
+    color: #5F4BB6;
+}
+
+.unread .message-preview {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style pour le chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+}
+
+.chat-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-product {
+    display: flex;
+    padding: 0.5rem;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-product-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.message {
+    max-width: 80%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 16px;
+}
+
+.message p {
+    margin: 0 0 0.25rem;
+}
+
+.message-time {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+    text-align: right;
+}
+
+.received {
+    background: #f0f0f0;
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+}
+
+.sent {
+    background: #E7E1FE;
+    border-bottom-right-radius: 4px;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.chat-input {
+    display: flex;
+    padding: 0.75rem;
+    background: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 24px;
+    border: 1px solid #ddd;
+    margin-right: 0.5rem;
+}
+
+/* Style pour upload de photos */
+.photo-upload {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.upload-placeholder {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-placeholder img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+}
+
+/* Style pour les paramètres */
+.settings-group {
+    margin-bottom: 2rem;
+}
+
+.settings-group h3 {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+}
+
+.button-danger {
+    background: #e74c3c;
+}
+
+.button-secondary {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+/* Style pour avis et ratings */
+.review {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.reviewer-name {
+    font-weight: bold;
+}
+
+.review-text {
+    margin: 0 0 0.5rem;
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Pour défilement horizontal */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.horizontal-scroll .listing {
+    min-width: 150px;
+    margin-right: 1rem;
+}
+
+/* Style pour textarea */
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
 }
