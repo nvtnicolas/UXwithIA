@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+}
+.app-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative; /* Ajouté */
+    overflow: hidden;   /* Ajouté pour éviter le débordement */
+}
+header {
+    background: #0078d7;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+.logo {
+    width: 48px;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+.search-bar {
+    display: flex;
+    margin: 1rem 0;
+}
+.search-bar input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.icon-btn {
+    background: #0078d7;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+.icon-btn img {
+    width: 20px;
+    height: 20px;
+}
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.button {
+    flex: 1;
+    padding: 1rem;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.featured-listings {
+    margin-top: 2rem;
+}
+.listing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+.listing-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+.listing-info {
+    display: flex;
+    flex-direction: column;
+}
+.listing-title {
+    font-weight: bold;
+}
+.listing-price {
+    color: #0078d7;
+}
+/* Barre de navigation en bas */
+.bottom-nav {
+    position: absolute;      /* Modifié de fixed à absolute */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    z-index: 100;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0078d7;
+    text-decoration: none;
+    font-size: 0.85rem;
+    flex: 1;
+    padding: 0.3rem 0;
+}
+
+.nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+main {
+    padding-bottom: 70px; /* Ajouté pour laisser la place à la nav */
+}
+
+/* Met en avant le bouton ajouter dans la nav */
+.add-btn {
+    background: #0078d7;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-top: -28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 101;
+}
+.add-btn img {
+    width: 32px;
+    height: 32px;
+}
+.trending-listings, .personal-listings {
+    margin-top: 2rem;
+}

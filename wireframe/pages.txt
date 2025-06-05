@@ -1,0 +1,18 @@
+-home page déconnecter ok
+-home page connecter ok
+-login page ok
+-sign up page ok
+-profile ok
+-search page ok
+-category page for search ok 
+-filter page for search (loc, price) ok
+-favorite page ok 
+-favorite page seller ok 
+-message page ok 
+-product page from buyer ok
+-seller page(note,avis,product) ok
+-sell page ok 
+-param page ok
+-order page ok
+-favorite page (product and seller)ok
+-product page from owner ok
