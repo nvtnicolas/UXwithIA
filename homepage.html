@@ -3,78 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil (Connecté)</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
     <div class="app-container">
         <header>
             <img src="wireframe/logo.png" alt="Logo" class="logo">
-            <h1>Nom de l’App</h1>
+            <h1>Craiglist</h1>
+            <div class="notification-icon">
+                <img src="assets/icons/notification-icon.svg" alt="Notifications">
+                <span class="notification-badge">3</span>
+            </div>
         </header>
         <main>
             <div class="search-bar">
                 <input type="text" placeholder="Rechercher une annonce...">
                 <button class="icon-btn">
-                    <img src="assets/icons/search-icon.png" alt="Rechercher">
+                    <img src="assets/icons/search-icon.svg" alt="Rechercher">
                 </button>
             </div>
-            <div class="personal-listings">
-                <h2>Pour vous</h2>
-                <div class="listing">
-                    <img src="wireframe/item-placeholder.png" alt="Pour vous 1" class="listing-img">
-                    <div class="listing-info">
-                        <span class="listing-title">Suggestion personnalisée</span>
-                        <span class="listing-price">Prix</span>
-                    </div>
-                </div>
-                <!-- Ajoute d'autres suggestions ici -->
+            <div class="category-grid">
+                <a href="categories.html" class="category-tile">
+                    <img src="wireframe/item-placeholder.png" alt="Électronique">
+                    <span>Électronique</span>
+                </a>
+                <a href="categories.html" class="category-tile">
+                    <img src="wireframe/item-clothe-placeholder.png" alt="Vêtements">
+                    <span>Vêtements</span>
+                </a>
+                <a href="categories.html" class="category-tile">
+                    <img src="wireframe/item-home-placeholder.png" alt="Maison">
+                    <span>Maison</span>
+                </a>
+                <a href="categories.html" class="category-tile">
+                    <img src="wireframe/item-sport-placeholder.png" alt="Sports">
+                    <span>Sports</span>
+                </a>
+                <a href="categories.html" class="category-tile">
+                    <img src="wireframe/item-garden-placeholder.png" alt="Jardinage">
+                    <span>Jardinage</span>
+                </a>
+                <a href="categories.html" class="category-tile">
+                    <img src="wireframe/item-auto-placeholder.png" alt="Auto">
+                    <span>Auto</span>
+                </a>
+                <a href="categories.html" class="category-tile see-all">
+                    <span>Voir tout</span>
+                </a>
             </div>
-            <div class="featured-listings">
-                <h2>Annonces à la une</h2>
-                <div class="listing">
-                    <img src="wireframe/item-placeholder.png" alt="Objet 1" class="listing-img">
-                    <div class="listing-info">
-                        <span class="listing-title">Titre de l’objet</span>
-                        <span class="listing-price">Prix</span>
-                    </div>
+            <div class="featured-section">
+                <div class="section-header">
+                    <h2>Annonces récentes</h2>
+                    <a href="search.html" class="see-all-link">Voir tout</a>
                 </div>
-                <!-- Ajoute d'autres annonces ici -->
+                <div class="listing-grid">
+                    <a href="product-details.html" class="listing">
+                        <img src="wireframe/produit1.png" alt="Produit 1" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Ordi</span>
+                            <span class="listing-price">100 €</span>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="listing">
+                        <img src="wireframe/produit2.png" alt="Produit 2" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Portrait de judite</span>
+                            <span class="listing-price">75 €</span>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="listing">
+                        <img src="wireframe/produit3.png" alt="Produit 3" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Beau chien</span>
+                            <span class="listing-price">50 €</span>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="listing">
+                        <img src="wireframe/produit4.png" alt="Produit 4" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Trotinette volée</span>
+                            <span class="listing-price">120 €</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="trending-listings">
-                <h2>Tendances</h2>
-                <div class="listing">
-                    <img src="wireframe/item-placeholder.png" alt="Tendance 1" class="listing-img">
-                    <div class="listing-info">
-                        <span class="listing-title">Titre tendance</span>
-                        <span class="listing-price">Prix</span>
-                    </div>
+            <div class="featured-section">
+                <div class="section-header">
+                    <h2>Près de chez vous</h2>
+                    <a href="search.html" class="see-all-link">Voir tout</a>
                 </div>
-                <!-- Ajoute d'autres tendances ici -->
+                <div class="listing-grid">
+                    <a href="product-details.html" class="listing">
+                        <img src="wireframe/Produit5.png" alt="Local 1" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Nain de maison</span>
+                            <span class="listing-price">60 €</span>
+                        </div>
+                    </a>
+                    <a href="product-details.html" class="listing">
+                        <img src="wireframe/produit6.png" alt="Local 2" class="listing-img">
+                        <div class="listing-info">
+                            <span class="listing-title">Lave vaisselle</span>
+                            <span class="listing-price">85 €</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </main>
-        <!-- Remplace la navigation actuelle par celle-ci -->
         <nav class="bottom-nav">
             <a href="search.html" class="nav-link">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
             <a href="messages.html" class="nav-link">
-                <img src="wireframe/message-icon.png" alt="Messages">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
                 <span>Messages</span>
             </a>
             <a href="new-listing.html" class="nav-link add-btn">
-                <img src="wireframe/add-icon.png" alt="Ajouter">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
             </a>
             <a href="favorites.html" class="nav-link">
-                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
                 <span>Favoris</span>
             </a>
             <a href="profile.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>
     </div>
+    <script src="js/homepage.js"></script>
 </body>
 </html>

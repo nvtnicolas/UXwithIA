@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Achats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="profile.html" class="back-btn">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
+            </a>
+            <h1>Mes Achats</h1>
+            <div class="notification-icon">
+                <img src="assets/icons/notification-icon.svg" alt="Notifications">
+                <span class="notification-badge">3</span>
+            </div>
+        </header>
+        <main>
+            <div class="tab-buttons">
+                <a href="#" class="tab-btn active">En cours</a>
+                <a href="#" class="tab-btn">Terminés</a>
+            </div>
+            
+            <div class="orders-list">
+                <a href="order-details.html" class="order-item">
+                    <img src="wireframe/item-placeholder.png" alt="Commande 1" class="order-img">
+                    <div class="order-info">
+                        <span class="order-title">Écouteurs sans fil</span>
+                        <span class="order-price">80 €</span>
+                        <span class="order-status pending">En cours de livraison</span>
+                        <span class="order-date">Achetés le 01/06/2025</span>
+                    </div>
+                </a>
+                
+                <a href="order-details.html" class="order-item">
+                    <img src="wireframe/item-placeholder.png" alt="Commande 2" class="order-img">
+                    <div class="order-info">
+                        <span class="order-title">Livre de cuisine</span>
+                        <span class="order-price">25 €</span>
+                        <span class="order-status">Livré le 28/05/2025</span>
+                        <span class="order-date">Achetés le 25/05/2025</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+        <nav class="bottom-nav">
+            <a href="search.html" class="nav-link">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
+                <span>Recherche</span>
+            </a>
+            <a href="messages.html" class="nav-link">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
+                <span>Messages</span>
+            </a>
+            <a href="new-listing.html" class="nav-link add-btn">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
+                <span>Favoris</span>
+            </a>
+            <a href="profile.html" class="nav-link active">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

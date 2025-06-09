@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <div class="app-container">
@@ -22,35 +23,38 @@
                     <label for="password">Mot de passe</label>
                     <input type="password" id="password" placeholder="Votre mot de passe" required>
                 </div>
-                <button type="submit" class="button">Se connecter</button>
+                <div class="form-actions">
+                    <button type="submit" class="button">Se connecter</button>
+                    <a href="#" class="link-text">Mot de passe oublié?</a>
+                </div>
             </form>
-            <div class="form-footer">
-                <p>Vous n'avez pas de compte ? <a href="signup.html">Créer un compte</a></p>
-                <p><a href="#">Mot de passe oublié ?</a></p>
+            <div class="auth-alternative">
+                <span>Pas encore de compte?</span>
+                <a href="signup.html" class="link-button">Créer un compte</a>
             </div>
         </main>
-        <!-- Remplace la navigation actuelle par celle-ci -->
         <nav class="bottom-nav">
             <a href="search.html" class="nav-link">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
             <a href="login.html" class="nav-link">
-                <img src="wireframe/message-icon.png" alt="Messages">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
                 <span>Messages</span>
             </a>
             <a href="login.html" class="nav-link add-btn">
-                <img src="wireframe/add-icon.png" alt="Ajouter">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
             </a>
             <a href="favorites.html" class="nav-link">
-                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
                 <span>Favoris</span>
             </a>
-            <a href="login.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+            <a href="login.html" class="nav-link active">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>
     </div>
+        <script src="js/login.js"></script>
 </body>
 </html>

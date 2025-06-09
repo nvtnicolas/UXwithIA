@@ -4,71 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catégories</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/categories.css">
 </head>
 <body>
     <div class="app-container">
         <header>
-            <img src="wireframe/logo.png" alt="Logo" class="logo">
-            <h1>Catégories</h1>
+            <div class="header-left">
+                <a href="javascript:history.back()" class="back-btn">
+                    <img src="assets/icons/back-icon.svg" alt="Retour">
+                </a>
+            </div>
+            <div class="header-center">
+                <h1>Catégories</h1>
+            </div>
+            <div class="header-right">
+                <div class="notification-icon">
+                    <img src="assets/icons/notification-icon.svg" alt="Notifications">
+                    <span class="notification-badge">3</span>
+                </div>
+            </div>
         </header>
         <main>
-            <div class="categories-list">
-                <a href="search.html?category=electronics" class="category-item">
-                    <img src="wireframe/electronics-icon.png" alt="Électronique" class="category-icon">
+            <div class="category-list">
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/electronics-icon.svg" alt="Électronique" class="category-img">
                     <span>Électronique</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
-                <a href="search.html?category=furniture" class="category-item">
-                    <img src="wireframe/furniture-icon.png" alt="Mobilier" class="category-icon">
-                    <span>Mobilier</span>
-                </a>
-                <a href="search.html?category=clothing" class="category-item">
-                    <img src="wireframe/clothing-icon.png" alt="Vêtements" class="category-icon">
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/clothing-icon.svg" alt="Vêtements" class="category-img">
                     <span>Vêtements</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
-                <a href="search.html?category=vehicles" class="category-item">
-                    <img src="wireframe/car-icon.png" alt="Véhicules" class="category-icon">
-                    <span>Véhicules</span>
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/furniture-icon.svg" alt="Mobilier" class="category-img">
+                    <span>Mobilier</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
-                <a href="search.html?category=services" class="category-item">
-                    <img src="wireframe/service-icon.png" alt="Services" class="category-icon">
-                    <span>Services</span>
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/books-icon.svg" alt="Livres" class="category-img">
+                    <span>Livres</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
-                <a href="search.html?category=real-estate" class="category-item">
-                    <img src="wireframe/home-icon.png" alt="Immobilier" class="category-icon">
-                    <span>Immobilier</span>
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/sports-icon.svg" alt="Sports" class="category-img">
+                    <span>Sports</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
-                <a href="search.html?category=jobs" class="category-item">
-                    <img src="wireframe/job-icon.png" alt="Emplois" class="category-icon">
-                    <span>Emplois</span>
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/gardening-icon.svg" alt="Jardinage" class="category-img">
+                    <span>Jardinage</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
-                <a href="search.html?category=other" class="category-item">
-                    <img src="wireframe/more-icon.png" alt="Autre" class="category-icon">
-                    <span>Autres</span>
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/auto-icon.svg" alt="Auto" class="category-img">
+                    <span>Auto</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
+                </a>
+                <a href="search.html" class="category-item">
+                    <img src="assets/icons/categories/misc-icon.svg" alt="Autre" class="category-img">
+                    <span>Autre</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
             </div>
         </main>
         <nav class="bottom-nav">
-            <a href="homepage.html" class="nav-link">
-                <img src="wireframe/home-icon.png" alt="Accueil">
-                <span>Accueil</span>
-            </a>
             <a href="search.html" class="nav-link active">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
+            <a href="messages.html" class="nav-link">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
+                <span>Messages</span>
+            </a>
             <a href="new-listing.html" class="nav-link add-btn">
-                <img src="wireframe/add-icon.png" alt="Ajouter">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
             </a>
             <a href="favorites.html" class="nav-link">
-                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
                 <span>Favoris</span>
             </a>
             <a href="profile.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>
     </div>
+    <script src="js/categories.js"></script>
 </body>
 </html>

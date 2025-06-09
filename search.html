@@ -11,49 +11,100 @@
         <header>
             <img src="wireframe/logo.png" alt="Logo" class="logo">
             <h1>Recherche</h1>
+            <div class="notification-icon">
+                <img src="assets/icons/notification-icon.svg" alt="Notifications">
+                <span class="notification-badge">3</span>
+            </div>
         </header>
         <main>
-            <div class="search-bar">
-                <input type="text" placeholder="Rechercher une annonce...">
-                <button class="icon-btn">
-                    <img src="wireframe/search-icon.png" alt="Rechercher">
-                </button>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher une annonce...">
+                    <button class="icon-btn">
+                        <img src="assets/icons/search-icon.svg" alt="Rechercher">
+                    </button>
+                </div>
+                <a href="filter-page.html" class="filter-btn">
+                    <img src="assets/icons/filter-icon.svg" alt="Filtrer">
+                    Filtres
+                </a>
             </div>
-            <div class="filter-options">
-                <a href="categories.html" class="filter-btn">Catégories</a>
-                <a href="filter-page.html" class="filter-btn">Filtres</a>
+            <div class="category-filter">
+                <div class="filter-scroll">
+                    <a href="#" class="category-chip active">Tous</a>
+                    <a href="#" class="category-chip">Électronique</a>
+                    <a href="#" class="category-chip">Vêtements</a>
+                    <a href="#" class="category-chip">Maison</a>
+                    <a href="#" class="category-chip">Sports</a>
+                    <a href="#" class="category-chip">Jardinage</a>
+                    <a href="#" class="category-chip">Auto</a>
+                </div>
             </div>
             <div class="search-results">
-                <h2>Résultats de recherche</h2>
-                <div class="listing">
+                <a href="product-details.html" class="listing">
                     <img src="wireframe/item-placeholder.png" alt="Résultat 1" class="listing-img">
                     <div class="listing-info">
-                        <span class="listing-title">Titre du produit</span>
-                        <span class="listing-price">Prix</span>
-                        <span class="listing-location">Localisation</span>
+                        <span class="listing-title">Titre du produit 1</span>
+                        <span class="listing-price">100 €</span>
+                        <span class="listing-location">Paris</span>
                     </div>
-                </div>
-                <div class="listing">
+                    <button class="icon-only-btn favorite-btn">
+                        <img src="assets/icons/fav-icon.svg" alt="Ajouter aux favoris">
+                    </button>
+                </a>
+                <a href="product-details.html" class="listing">
                     <img src="wireframe/item-placeholder.png" alt="Résultat 2" class="listing-img">
                     <div class="listing-info">
-                        <span class="listing-title">Autre produit</span>
-                        <span class="listing-price">Prix</span>
-                        <span class="listing-location">Localisation</span>
+                        <span class="listing-title">Titre du produit 2</span>
+                        <span class="listing-price">75 €</span>
+                        <span class="listing-location">Lyon</span>
                     </div>
-                </div>
+                    <button class="icon-only-btn favorite-btn">
+                        <img src="assets/icons/fav-icon.svg" alt="Ajouter aux favoris">
+                    </button>
+                </a>
+                <a href="product-details.html" class="listing">
+                    <img src="wireframe/item-placeholder.png" alt="Résultat 3" class="listing-img">
+                    <div class="listing-info">
+                        <span class="listing-title">Titre du produit 3</span>
+                        <span class="listing-price">50 €</span>
+                        <span class="listing-location">Marseille</span>
+                    </div>
+                    <button class="icon-only-btn favorite-btn">
+                        <img src="assets/icons/fav-icon.svg" alt="Ajouter aux favoris">
+                    </button>
+                </a>
+                <a href="product-details.html" class="listing">
+                    <img src="wireframe/item-placeholder.png" alt="Résultat 4" class="listing-img">
+                    <div class="listing-info">
+                        <span class="listing-title">Titre du produit 4</span>
+                        <span class="listing-price">120 €</span>
+                        <span class="listing-location">Toulouse</span>
+                    </div>
+                    <button class="icon-only-btn favorite-btn">
+                        <img src="assets/icons/fav-icon.svg" alt="Ajouter aux favoris">
+                    </button>
+                </a>
             </div>
         </main>
         <nav class="bottom-nav">
-            <a href="home-deconnecte.html" class="nav-link">
-                <img src="wireframe/home-icon.png" alt="Accueil">
-                <span>Accueil</span>
-            </a>
             <a href="search.html" class="nav-link active">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
-            <a href="login.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+            <a href="messages.html" class="nav-link">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
+                <span>Messages</span>
+            </a>
+            <a href="new-listing.html" class="nav-link add-btn">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
+            </a>
+            <a href="favorites.html" class="nav-link">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
+                <span>Favoris</span>
+            </a>
+            <a href="profile.html" class="nav-link">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>

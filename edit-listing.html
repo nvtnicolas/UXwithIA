@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier l'annonce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/edit-listing.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="product-owner.html" class="back-btn">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
+            </a>
+            <h1>Modifier l'annonce</h1>
+        </header>
+        <main class="form-page">
+            <form action="product-owner.html" method="get">
+                <div class="form-group">
+                    <label for="title">Titre de l'annonce</label>
+                    <input type="text" id="title" value="Télévision Samsung 4K" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Catégorie</label>
+                    <div class="category-selector">
+                        <a href="select-category.html" class="button button-secondary">Électronique <span class="edit-icon">✎</span></a>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Prix (€)</label>
+                    <input type="number" id="price" value="350" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Photos</label>
+                    <div class="photo-gallery">
+                        <div class="photo-item">
+                            <img src="wireframe/product-télé1-placeholder.png" alt="Photo produit">
+                            <button class="delete-btn">×</button>
+                        </div>
+                        <div class="photo-item">
+                            <img src="wireframe/product-télé2-placeholder.png" alt="Photo produit">
+                            <button class="delete-btn">×</button>
+                        </div>
+                        <div class="photo-item">
+                            <img src="wireframe/product-télé3-placeholder.png" alt="Photo produit">
+                            <button class="delete-btn">×</button>
+                        </div>
+                        <div class="upload-placeholder">
+                            <img src="assets/icons/camera-icon.svg" alt="Ajouter photo">
+                            <span>Ajouter</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="5">Télévision Samsung 4K, 55 pouces, parfait état. Achetée il y a 2 ans. Vendue car déménagement. Télécommande et notice incluses.</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Localisation</label>
+                    <input type="text" id="location" value="Paris, 75001">
+                </div>
+                
+                <button type="submit" class="button">Enregistrer les modifications</button>
+            </form>
+        </main>
+        <!-- Pas de barre de navigation conformément aux wireframes -->
+    </div>
+    <script src="js/edit-listing.js"></script>
+</body>
+</html>

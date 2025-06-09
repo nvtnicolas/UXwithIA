@@ -9,75 +9,156 @@
 <body>
     <div class="app-container">
         <header>
-            <a href="javascript:history.back()" class="back-btn">
-                <img src="wireframe/back-icon.png" alt="Retour">
-            </a>
-            <h1>Nouvelle annonce</h1>
+            <div class="header-left">
+                <a href="javascript:history.back()" class="back-btn">
+                    <img src="assets/icons/back-icon.svg" alt="Retour">
+                </a>
+            </div>
+            <div class="header-center">
+                <h1>Créer une annonce</h1>
+            </div>
+            <div class="header-right">
+                <!-- Cette section reste vide -->
+            </div>
         </header>
+        
         <main class="form-page">
-            <form action="product-owner.html" method="get">
+            <form action="my-listings.html" method="get" id="new-listing-form">
+                <!-- Section photos -->
                 <div class="form-group">
-                    <label for="title">Titre de l'annonce</label>
-                    <input type="text" id="title" placeholder="Titre descriptif" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Catégorie</label>
-                    <div class="category-selector">
-                        <a href="select-category.html" class="button button-secondary">Choisir une catégorie</a>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="price">Prix (€)</label>
-                    <input type="number" id="price" placeholder="0" min="0" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Photos</label>
-                    <div class="photo-upload">
-                        <div class="upload-placeholder">
-                            <img src="wireframe/camera-icon.png" alt="Ajouter photo">
-                            <span>Ajouter des photos</span>
+                    <label>Photos du produit</label>
+                    <div class="photo-upload-container">
+                        <div class="photo-upload">
+                            <input type="file" id="photo-upload" multiple accept="image/*" hidden>
+                            <label for="photo-upload" class="upload-placeholder">
+                                <img src="assets/icons/camera-icon.svg" alt="Ajouter photo">
+                                <span>Ajouter des photos</span>
+                            </label>
+                        </div>
+                        <div class="photo-preview-container" id="photo-preview-container">
+                            <!-- Les photos téléchargées s'afficheront ici -->
                         </div>
                     </div>
+                    <p class="form-hint">Vous pouvez ajouter jusqu'à 10 photos</p>
                 </div>
                 
+                <!-- Section titre -->
                 <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" rows="5" placeholder="Décrivez votre article en détail"></textarea>
+                    <label for="listing-title">Titre de l'annonce *</label>
+                    <input type="text" id="listing-title" placeholder="Ex: Téléviseur Samsung 4K" required>
                 </div>
                 
+                <!-- Section catégorie -->
                 <div class="form-group">
-                    <label for="location">Localisation</label>
-                    <input type="text" id="location" placeholder="Ville ou code postal">
+                    <label for="listing-category">Catégorie *</label>
+                    <div class="select-wrapper">
+                        <select id="listing-category" required>
+                            <option value="" disabled selected>Choisir une catégorie</option>
+                            <option value="electronics">Électronique</option>
+                            <option value="clothing">Vêtements</option>
+                            <option value="furniture">Mobilier</option>
+                            <option value="books">Livres</option>
+                            <option value="sports">Sports</option>
+                            <option value="gardening">Jardinage</option>
+                            <option value="auto">Auto</option>
+                            <option value="misc">Autre</option>
+                        </select>
+                    </div>
                 </div>
                 
-                <button type="submit" class="button">Publier l'annonce</button>
+                <!-- Section état -->
+                <div class="form-group">
+                    <label>État *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="condition" value="new" required>
+                            <span>Neuf</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="condition" value="like-new">
+                            <span>Comme neuf</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="condition" value="good">
+                            <span>Bon état</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="condition" value="used">
+                            <span>Usagé</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Section prix -->
+                <div class="form-group">
+                    <label for="listing-price">Prix *</label>
+                    <div class="price-input">
+                        <input type="number" id="listing-price" min="0" step="0.01" required>
+                        <span class="price-currency">€</span>
+                    </div>
+                </div>
+                
+                <!-- Section description -->
+                <div class="form-group">
+                    <label for="listing-description">Description *</label>
+                    <textarea id="listing-description" rows="5" placeholder="Décrivez votre article (état, caractéristiques, etc.)" required></textarea>
+                    <div class="char-counter"><span id="char-count">0</span>/2000</div>
+                </div>
+                
+                <!-- Section localisation -->
+                <div class="form-group">
+                    <label for="listing-location">Localisation *</label>
+                    <div class="location-input">
+                        <input type="text" id="listing-location" placeholder="Ville, code postal" required>
+                        <button type="button" class="icon-btn" id="get-location">
+                            <img src="assets/icons/location-icon.svg" alt="Localisation">
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Section livraison -->
+                <div class="form-group">
+                    <label>Options de livraison</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="delivery-options" value="in-person">
+                            <span>Remise en main propre</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="delivery-options" value="shipping">
+                            <span>Envoi postal</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Bouton de soumission -->
+                <button type="submit" class="button" id="submit-listing">Publier l'annonce</button>
             </form>
         </main>
         
         <nav class="bottom-nav">
-            <a href="homepage.html" class="nav-link">
-                <img src="wireframe/home-icon.png" alt="Accueil">
-                <span>Accueil</span>
-            </a>
             <a href="search.html" class="nav-link">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
+            <a href="messages.html" class="nav-link">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
+                <span>Messages</span>
+            </a>
             <a href="new-listing.html" class="nav-link add-btn active">
-                <img src="wireframe/add-icon.png" alt="Ajouter">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
             </a>
             <a href="favorites.html" class="nav-link">
-                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
                 <span>Favoris</span>
             </a>
             <a href="profile.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>
     </div>
+    
+    <script src="js/new-listing.js"></script>
 </body>
 </html>

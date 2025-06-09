@@ -1,0 +1,150 @@
+/* Styles spécifiques pour la page des catégories */
+
+/* Liste des catégories */
+.category-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -1rem; /* Étendre légèrement au-delà des marges du container */
+}
+
+/* Élément de catégorie */
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    position: relative;
+}
+
+.category-item:active {
+    background-color: #f0eeff;
+    transform: scale(0.99);
+}
+
+/* Image de catégorie */
+.category-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    padding: 8px;
+    background-color: #f0eeff; /* Fond léger basé sur la couleur du thème */
+    object-fit: contain;
+    margin-right: 1rem;
+    transition: transform 0.2s ease;
+}
+
+/* Nom de la catégorie */
+.category-item span {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Icône flèche */
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+}
+
+/* Effets au survol/toucher */
+.category-item:hover {
+    background-color: #f5f5f5;
+}
+
+.category-item:hover .category-img {
+    transform: scale(1.05);
+}
+
+.category-item:hover .arrow-icon {
+    transform: translateX(3px);
+    opacity: 0.8;
+}
+
+/* État actif/touché */
+.category-selected {
+    background-color: #f0eeff;
+}
+
+.category-selected .category-img {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(95, 75, 182, 0.2);
+}
+
+/* Notification icon spécifique à cette page */
+.notification-icon {
+    position: relative; /* Nécessaire pour positionner le badge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background-color: transparent; /* Supprime tout fond blanc */
+    border: none; /* Supprime toute bordure non désirée */
+}
+
+/* Icône SVG */
+.notification-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Style du badge de notification */
+.notification-badge {
+    position: absolute;
+    top: -5px; /* Ajuster la position verticale */
+    right: -5px; /* Ajuster la position horizontale */
+    background-color: #ff5252; /* Couleur rouge pour le badge */
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.3); /* Contour léger pour plus de visibilité */
+}
+
+/* Animation de pulsation pour les notifications */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.notification-badge {
+    animation: pulse 2s infinite;
+}
+
+/* Optimisation pour les appareils à écran tactile */
+@media (hover: none) {
+    .category-item:active .arrow-icon {
+        transform: translateX(3px);
+    }
+}
+
+/* Animation lors du chargement des catégories */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.category-item {
+    animation: fadeIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+/* Délai d'animation pour chaque élément */
+.category-item:nth-child(1) { animation-delay: 0.05s; }
+.category-item:nth-child(2) { animation-delay: 0.1s; }
+.category-item:nth-child(3) { animation-delay: 0.15s; }
+.category-item:nth-child(4) { animation-delay: 0.2s; }
+.category-item:nth-child(5) { animation-delay: 0.25s; }
+.category-item:nth-child(6) { animation-delay: 0.3s; }
+.category-item:nth-child(7) { animation-delay: 0.35s; }
+.category-item:nth-child(8) { animation-delay: 0.4s; }

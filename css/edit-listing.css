@@ -1,0 +1,219 @@
+/* Conteneur principal */
+.app-container {
+    max-width: 430px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Empêche le scroll global */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header fixé en haut */
+header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 18px 16px 10px 16px;
+    background: #654bb6;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 60px;
+}
+
+header .back-btn {
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+/* Contenu scrollable */
+.form-page {
+    flex: 1 1 auto;
+    overflow-y: auto;     /* autorise le scroll vertical */
+    overflow-x: hidden;   /* empêche tout scroll horizontal résiduel */
+    padding: 24px 16px 32px 16px;
+    box-sizing: border-box;
+}
+
+/* Formulaire */
+.form-group {
+    margin-bottom: 15px; /* Réduit l'espace entre les groupes */
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Réduit l'espace sous le label */
+    display: block;
+    font-weight: 600;
+    color: #5f4bb6;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px; /* Réduit légèrement l'espace intérieur */
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.9rem; /* Diminue la taille de police */
+    background: #faf8ff;
+    transition: border 0.2s;
+    margin-bottom: 2px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #5f4bb6;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.button,
+.button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 8px;
+}
+
+.button {
+    background: #5f4bb6;
+    color: #fff;
+}
+
+.button:hover {
+    background: #4a3991;
+}
+
+.button-secondary {
+    background: #f0eeff;
+    color: #5f4bb6;
+    border: 1px solid #d1c7f7;
+}
+
+.button-secondary:hover {
+    background: #e2dbfa;
+}
+
+.edit-icon {
+    margin-left: 8px;
+    font-size: 1.1em;
+}
+
+/* Galerie de photos */
+.photo-gallery {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.photo-item {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f0eeff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #ff5252;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #d32f2f;
+}
+
+.upload-placeholder {
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    background: #e2dbfa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #5f4bb6;
+    cursor: pointer;
+    border: 2px dashed #b6a7e6;
+    transition: background 0.2s, border 0.2s;
+}
+
+.upload-placeholder:hover {
+    background: #d1c7f7;
+    border-color: #5f4bb6;
+}
+
+.upload-placeholder img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+}
+
+.upload-placeholder span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Empêche le défilement horizontal global */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;  /* empêche le scroll vertical global */
+    overflow-x: hidden;  /* empêche le scroll horizontal global */
+    background: #f5f5f5;
+}

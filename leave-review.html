@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laisser un avis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/leave-review.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="order-details.html" class="back-btn">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
+            </a>
+            <h1>Laisser un avis</h1>
+        </header>
+        <main class="form-page">
+            <form action="order-details.html" method="get">
+                <div class="product-card">
+                    <img src="wireframe/item-placeholder.png" alt="Produit" class="product-img">
+                    <div class="product-info">
+                        <h3>Tv samsung 4k</h3>
+                        <span class="product-price">350€</span>
+                        <span class="seller-name">Vendu par: Jean Dupont</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Note</label>
+                    <div class="rating-input">
+                        <span class="star-rating">
+                            <input type="radio" name="rating" value="5" id="rate-5">
+                            <label for="rate-5">★</label>
+                            <input type="radio" name="rating" value="4" id="rate-4">
+                            <label for="rate-4">★</label>
+                            <input type="radio" name="rating" value="3" id="rate-3">
+                            <label for="rate-3">★</label>
+                            <input type="radio" name="rating" value="2" id="rate-2">
+                            <label for="rate-2">★</label>
+                            <input type="radio" name="rating" value="1" id="rate-1">
+                            <label for="rate-1">★</label>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-title">Titre de l'avis</label>
+                    <input type="text" id="review-title" placeholder="Ex: Très satisfait de mon achat">
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-content">Votre avis</label>
+                    <textarea id="review-content" rows="5" placeholder="Partagez votre expérience avec ce produit et ce vendeur..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Photos (optionnel)</label>
+                    <div class="photo-upload">
+                        <div class="upload-placeholder">
+                            <img src="assets/icons/camera-icon.svg" alt="Ajouter photo">
+                            <span>Ajouter des photos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="button">Publier l'avis</button>
+            </form>
+        </main>
+        <!-- Pas de barre de navigation conformément aux wireframes -->
+    </div>
+    <script src="js/leave-review.js"></script>
+</body>
+</html>

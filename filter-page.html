@@ -3,71 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtres</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Filtrer les résultats</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/filter.css">
 </head>
 <body>
     <div class="app-container">
         <header>
-            <img src="wireframe/logo.png" alt="Logo" class="logo">
+            <a href="search.html" class="back-btn">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
+            </a>
             <h1>Filtres</h1>
         </header>
         <main class="form-page">
             <form action="search.html" method="get">
                 <div class="form-group">
-                    <label for="price-min">Prix minimum</label>
-                    <input type="number" id="price-min" placeholder="0">
+                    <label>Catégorie</label>
+                    <div class="category-selector">
+                        <a href="select-category.html" class="button button-secondary">
+                            Toutes les catégories <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="form-group">
-                    <label for="price-max">Prix maximum</label>
-                    <input type="number" id="price-max" placeholder="999999">
+                    <label>Prix</label>
+                    <div class="price-range">
+                        <input type="number" placeholder="Min" min="0">
+                        <span class="separator">-</span>
+                        <input type="number" placeholder="Max" min="0">
+                    </div>
                 </div>
+                
                 <div class="form-group">
-                    <label for="location">Localisation</label>
-                    <input type="text" id="location" placeholder="Ville ou code postal">
+                    <label>Localisation</label>
+                    <input type="text" placeholder="Ville, code postal">
                 </div>
+                
                 <div class="form-group">
-                    <label for="radius">Rayon (km)</label>
-                    <input type="range" id="radius" min="1" max="100" value="50">
-                    <span id="radius-value">50 km</span>
+                    <label>Distance maximum</label>
+                    <div class="range-slider">
+                        <input type="range" min="1" max="100" value="50">
+                        <span class="range-value">50 km</span>
+                    </div>
                 </div>
+                
                 <div class="form-group checkbox-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" id="new-only">
-                        Articles neufs uniquement
+                        <input type="checkbox">
+                        Uniquement les annonces avec photos
                     </label>
                 </div>
+                
                 <div class="form-group checkbox-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" id="delivery-only">
-                        Livraison possible
+                        <input type="checkbox">
+                        Uniquement les vendeurs vérifiés
                     </label>
                 </div>
-                <button type="submit" class="button">Appliquer les filtres</button>
-                <button type="reset" class="button button-secondary">Réinitialiser</button>
+                
+                
+                
+                <div class="form-group">
+                    <label>Tri par</label>
+                    <select>
+                        <option value="recent">Plus récentes</option>
+                        <option value="price_low">Prix croissant</option>
+                        <option value="price_high">Prix décroissant</option>
+                        <option value="popular">Popularité</option>
+                    </select>
+                </div>
+                
+                <div class="filter-actions">
+                    <button type="submit" class="button">Appliquer</button>
+                    <button type="reset" class="button button-secondary">Réinitialiser</button>
+                </div>
             </form>
         </main>
         <nav class="bottom-nav">
-            <a href="homepage.html" class="nav-link">
-                <img src="wireframe/home-icon.png" alt="Accueil">
-                <span>Accueil</span>
-            </a>
             <a href="search.html" class="nav-link active">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
+            <a href="messages.html" class="nav-link">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
+                <span>Messages</span>
+            </a>
             <a href="new-listing.html" class="nav-link add-btn">
-                <img src="wireframe/add-icon.png" alt="Ajouter">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
             </a>
             <a href="favorites.html" class="nav-link">
-                <img src="wireframe/fav-icon.png" alt="Favoris">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
                 <span>Favoris</span>
             </a>
             <a href="profile.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>
     </div>
+    <script src="js/filter.js"></script>
 </body>
 </html>

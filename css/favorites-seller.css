@@ -1,0 +1,214 @@
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css\favorites-seller.css */
+
+/* Mise en page au format téléphone */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* En-tête fixe */
+header {
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+
+/* Logo */
+.logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+/* Notification icon */
+.notification-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ff5252;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenu défilant verticalement */
+main {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Boutons de tabulation */
+.tab-buttons {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #654bb6;
+    background: #f0eeff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.tab-btn:last-child { margin-right: 0; }
+
+.tab-btn.active {
+    background: #654bb6;
+    color: #fff;
+}
+
+/* Liste des vendeurs favoris */
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Carte vendeur */
+.user-card {
+    display: flex;
+    align-items: center;
+    background: #faf8ff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-card:hover {
+    background: #eee6ff;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+    background: #ccc;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #654bb6;
+}
+
+.user-rating,
+.user-products {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.icon-only-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-only-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Barre de navigation en bas */
+.bottom-nav {
+    position: fixed;       /* Rend la barre fixe */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;      /* Pour rester dans le format téléphone */
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: #f0eeff;
+}

@@ -1,0 +1,224 @@
+
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css/homepage.css */
+
+/* Mise en page smartphone */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header fixe avec titre centré */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+.logo {
+    position: absolute;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.notification-icon {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-icon img {
+    width: 24px;
+    height: 24px;
+}
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ff5252;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main contenu scrollable verticalement */
+main {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* Pour éviter que le contenu soit masqué par la barre de navigation */
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: #faf8ff;
+}
+.icon-btn {
+    background: #5f4bb6;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+.icon-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Grille des catégories */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.category-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #654bb6;
+    background: #f0eeff;
+    padding: 12px;
+    border-radius: 8px;
+}
+.category-tile img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+.category-tile.see-all {
+    justify-content: center;
+}
+
+/* Sections mises en avant */
+.featured-section {
+    margin-bottom: 24px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.section-header h2 {
+    font-size: 1.1rem;
+    color: #654bb6;
+    margin: 0;
+}
+.see-all-link {
+    font-size: 0.9rem;
+    color: #5f4bb6;
+    text-decoration: none;
+}
+.listing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.listing {
+    background: #faf8ff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+.listing-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.listing-info {
+    padding: 8px;
+}
+.listing-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #654bb6;
+}
+.listing-price {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Barre de navigation fixe en bas */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}
+.nav-link:hover {
+    background: #f0eeff;
+}

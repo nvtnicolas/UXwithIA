@@ -1,0 +1,170 @@
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css/messages.css */
+
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* En-tête fixe */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+.logo {
+    position: absolute;
+    left: 16px;
+    top: 16px;  /* Ajuste cette valeur pour positionner le logo plus haut */
+    width: 32px;
+    height: 32px;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.notification-icon {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-icon img {
+    width: 24px;
+    height: 24px;
+}
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ff5252;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenu principal scrollable */
+main {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 16px;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* Pour laisser de l'espace sous le contenu */
+}
+
+/* Liste des messages */
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Message item */
+.message-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+    color: inherit;
+}
+.message-item.unread {
+    background: #e2dbfa;
+}
+.user-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.message-info {
+    flex: 1;
+}
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.user-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #654bb6;
+}
+.message-time {
+    font-size: 0.8rem;
+    color: #888;
+}
+.message-preview {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Barre de navigation fixe */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}
+.bottom-nav .nav-link:hover,
+.bottom-nav .nav-link.active {
+    background: #f0eeff;
+}

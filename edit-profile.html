@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier Profil</title>
+    <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/edit-profile.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="settings.html" class="back-btn">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
+            </a>
+            <h1>Modifier Profil</h1>
+        </header>
+        <main class="form-page">
+            <form action="profile.html" method="get">
+                <div class="profile-photo-edit">
+                    <img src="wireframe/user-placeholder.png" alt="Photo de profil" class="profile-img">
+                    <button class="photo-edit-btn">Modifier la photo</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" value="Nom d'utilisateur" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" value="06 12 34 56 78">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Localisation</label>
+                    <input type="text" id="location" value="Paris, France">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">À propos de moi</label>
+                    <textarea id="bio" rows="4">Passionné de technologie et amateur de brocantes.</textarea>
+                </div>
+                
+                <button type="submit" class="button">Enregistrer les modifications</button>
+            </form>
+        </main>
+        <!-- Pas de barre de navigation conformément aux wireframes -->
+    </div>
+        <script src="js/edit-profile.js"></script>
+</body>
+</html>

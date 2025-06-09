@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyens de paiement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="settings.html" class="back-btn">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
+            </a>
+            <h1>Moyens de paiement</h1>
+        </header>
+        <main>
+            <div class="payment-methods-list">
+                <div class="payment-method">
+                    <div class="payment-method-info">
+                        <img src="wireframe/visa-icon.png" alt="Visa" class="payment-icon">
+                        <div>
+                            <span class="card-number">**** **** **** 1234</span>
+                            <span class="card-expiry">Exp: 12/26</span>
+                        </div>
+                    </div>
+                    <div class="payment-actions">
+                        <span class="default-badge">Par défaut</span>
+                        <button class="icon-only-btn">
+                            <img src="assets/icons/more-icon.svg" alt="Plus d'options">
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="payment-method">
+                    <div class="payment-method-info">
+                        <img src="wireframe/mastercard-icon.png" alt="Mastercard" class="payment-icon">
+                        <div>
+                            <span class="card-number">**** **** **** 5678</span>
+                            <span class="card-expiry">Exp: 08/25</span>
+                        </div>
+                    </div>
+                    <div class="payment-actions">
+                        <button class="icon-only-btn">
+                            <img src="assets/icons/more-icon.svg" alt="Plus d'options">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="add-payment-method.html" class="button add-payment-btn">
+                <img src="assets/icons/add-icon.svg" alt="+" class="button-icon">
+                Ajouter un moyen de paiement
+            </a>
+        </main>
+        <!-- Pas de barre de navigation conformément aux wireframes -->
+    </div>
+</body>
+</html>

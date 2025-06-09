@@ -4,52 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
     <div class="app-container">
         <header>
-            <a href="messages.html" class="back-btn">
-                <img src="wireframe/back-icon.png" alt="Retour">
-            </a>
-            <div class="chat-header-info">
-                <span class="user-name">Jean Dupont</span>
-                <span class="product-title">Télévision Samsung 4K</span>
+            <div class="header-left">
+                <a href="messages.html" class="back-btn">
+                    <img src="assets/icons/back-icon.svg" alt="Retour">
+                </a>
+            </div>
+            <div class="header-center">
+                <a href="seller-profile.html" class="chat-user">
+                    <img src="wireframe/user-placeholder.png" alt="User" class="user-img">
+                    <div>
+                        <span class="user-name">Jean Dupont</span>
+                        <span class="user-status">En ligne</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="product-details.html" class="chat-product">
+                    <img src="wireframe/item-placeholder.png" alt="Produit">
+                </a>
             </div>
         </header>
         <main class="chat-container">
-            <div class="chat-product">
-                <img src="wireframe/product-placeholder.png" alt="Produit" class="chat-product-img">
-                <div class="chat-product-info">
-                    <span class="listing-title">Télévision Samsung 4K</span>
-                    <span class="listing-price">350 €</span>
-                </div>
-            </div>
-            <div class="chat-messages">
+            <div class="chat-date">Aujourd'hui</div>
+            
+            <div class="message-wrapper">
                 <div class="message received">
                     <p>Bonjour, est-ce que l'article est toujours disponible ?</p>
-                    <span class="message-time">Hier, 15:30</span>
+                    <span class="message-time">10:15</span>
                 </div>
+                
                 <div class="message sent">
-                    <p>Bonjour ! Oui l'article est toujours disponible.</p>
-                    <span class="message-time">Hier, 16:05</span>
+                    <p>Bonjour ! Oui, il est toujours disponible.</p>
+                    <span class="message-time">10:18</span>
                 </div>
+                
                 <div class="message received">
-                    <p>Super ! Quel est l'état de l'écran ? Y a-t-il des défauts ?</p>
-                    <span class="message-time">Hier, 16:10</span>
+                    <p>Parfait ! Est-ce qu'il serait possible de le récupérer demain en fin d'après-midi ?</p>
+                    <span class="message-time">10:20</span>
                 </div>
+                
                 <div class="message sent">
-                    <p>L'écran est en parfait état, pas de pixels morts ni de rayures. L'appareil a 2 ans.</p>
-                    <span class="message-time">Hier, 16:15</span>
+                    <p>Oui, ça me convient. Vers 17h ?</p>
+                    <span class="message-time">10:25</span>
                 </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Votre message...">
-                <button class="icon-btn">
-                    <img src="wireframe/send-icon.png" alt="Envoyer">
-                </button>
+                
+                <div class="message received">
+                    <p>Super ! 17h c'est parfait. Pouvez-vous me donner l'adresse exacte ?</p>
+                    <span class="message-time">10:28</span>
+                </div>
             </div>
         </main>
+        
+        <div class="chat-input">
+            <input type="text" placeholder="Votre message...">
+            <button class="send-btn">
+                <img src="assets/icons/send-icon.svg" alt="Envoyer">
+            </button>
+        </div>
+        <!-- Pas de barre de navigation dans la page chat conformément aux wireframes -->
     </div>
+    <script src="js/chat.js"></script>
 </body>
 </html>

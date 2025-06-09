@@ -1,0 +1,189 @@
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css\home-deconnecte.css */
+
+/* Mise en page téléphone */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;         /* Aligne les enfants (logo et h1) sur une même ligne */
+    align-items: center;   /* Centre verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: relative;    
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+
+.logo {
+    position: absolute;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+}
+
+/* Centrer le texte « Craiglist » */
+header h1 {
+    margin: 0;   
+    font-size: 1.25rem;
+    text-align: center; /* Centre le texte dans l'espace disponible */
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    margin: 16px 0;
+    gap: 8px;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: #faf8ff;
+}
+
+.icon-btn {
+    background: #5f4bb6;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.icon-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Boutons CTA */
+.cta-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #5f4bb6;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #4a3991;
+}
+
+/* Annonces en vedette et tendances */
+.featured-listings, .trending-listings {
+    margin-bottom: 24px;
+}
+
+.featured-listings h2, .trending-listings h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #654bb6;
+}
+
+.listing {
+    display: flex;
+    align-items: center;
+    background: #faf8ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.listing-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.listing-info {
+    flex: 1;
+}
+
+.listing-title {
+    display: block;
+    font-weight: 600;
+    color: #5f4bb6;
+    margin-bottom: 4px;
+}
+
+.listing-price {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Barre de navigation en bas */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-link:hover {
+    background: #f0eeff;
+}

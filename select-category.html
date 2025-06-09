@@ -3,53 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choisir catégorie</title>
+    <title>Sélectionner une catégorie</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
         <header>
             <a href="javascript:history.back()" class="back-btn">
-                <img src="wireframe/back-icon.png" alt="Retour">
+                <img src="assets/icons/back-icon.svg" alt="Retour">
             </a>
             <h1>Choisir une catégorie</h1>
         </header>
         <main>
-            <div class="categories-list select-mode">
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher une catégorie...">
+                <button class="icon-btn">
+                    <img src="assets/icons/search-icon.svg" alt="Rechercher">
+                </button>
+            </div>
+            <div class="category-list">
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/electronics-icon.png" alt="Électronique" class="category-icon">
+                    <img src="wireframe/item-placeholder.png" alt="Électronique" class="category-img">
                     <span>Électronique</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/furniture-icon.png" alt="Mobilier" class="category-icon">
-                    <span>Mobilier</span>
-                </a>
-                <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/clothing-icon.png" alt="Vêtements" class="category-icon">
+                    <img src="wireframe/item-placeholder.png" alt="Vêtements" class="category-img">
                     <span>Vêtements</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/car-icon.png" alt="Véhicules" class="category-icon">
-                    <span>Véhicules</span>
+                    <img src="wireframe/item-placeholder.png" alt="Mobilier" class="category-img">
+                    <span>Mobilier</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/service-icon.png" alt="Services" class="category-icon">
-                    <span>Services</span>
+                    <img src="wireframe/item-placeholder.png" alt="Livres" class="category-img">
+                    <span>Livres</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/home-icon.png" alt="Immobilier" class="category-icon">
-                    <span>Immobilier</span>
+                    <img src="wireframe/item-placeholder.png" alt="Sports" class="category-img">
+                    <span>Sports</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/job-icon.png" alt="Emplois" class="category-icon">
-                    <span>Emplois</span>
+                    <img src="wireframe/item-placeholder.png" alt="Jardinage" class="category-img">
+                    <span>Jardinage</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
                 <a href="new-listing.html" class="category-item">
-                    <img src="wireframe/more-icon.png" alt="Autre" class="category-icon">
-                    <span>Autres</span>
+                    <img src="wireframe/item-placeholder.png" alt="Auto" class="category-img">
+                    <span>Auto</span>
+                    <img src="assets/icons/arrow-right.svg" alt=">" class="arrow-icon">
                 </a>
             </div>
         </main>
+        <!-- Pas de barre de navigation conformément aux wireframes -->
     </div>
 </body>
 </html>

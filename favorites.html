@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favoris</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/favorites.css">
 </head>
 <body>
     <div class="app-container">
         <header>
             <img src="wireframe/logo.png" alt="Logo" class="logo">
             <h1>Favoris</h1>
+            <div class="notification-icon">
+                <img src="assets/icons/notification-icon.svg" alt="Notifications">
+                <span class="notification-badge">3</span>
+            </div>
         </header>
         <main>
             <div class="tab-buttons">
                 <a href="#" class="tab-btn active">Produits</a>
                 <a href="favorites-seller.html" class="tab-btn">Vendeurs</a>
+            </div>
+            
+            <div class="category-filter">
+                <div class="filter-scroll">
+                    <a href="#" class="category-chip active">Tous</a>
+                    <a href="#" class="category-chip">Électronique</a>
+                    <a href="#" class="category-chip">Vêtements</a>
+                    <a href="#" class="category-chip">Mobilier</a>
+                    <a href="#" class="category-chip">Livres</a>
+                    <a href="#" class="category-chip">Sports</a>
+                    <a href="#" class="category-chip">Décoration</a>
+                </div>
             </div>
             
             <div class="favorites-list">
@@ -27,7 +44,7 @@
                         <span class="listing-location">Localisation</span>
                     </div>
                     <button class="icon-only-btn">
-                        <img src="wireframe/unfav-icon.png" alt="Retirer des favoris">
+                        <img src="assets/icons/unfav-icon.svg" alt="Retirer des favoris">
                     </button>
                 </div>
                 
@@ -39,32 +56,33 @@
                         <span class="listing-location">Localisation</span>
                     </div>
                     <button class="icon-only-btn">
-                        <img src="wireframe/unfav-icon.png" alt="Retirer des favoris">
+                        <img src="assets/icons/unfav-icon.svg" alt="Retirer des favoris">
                     </button>
                 </div>
             </div>
         </main>
         <nav class="bottom-nav">
             <a href="search.html" class="nav-link">
-                <img src="wireframe/search-icon.png" alt="Recherche">
+                <img src="assets/icons/search-icon.svg" alt="Recherche">
                 <span>Recherche</span>
             </a>
             <a href="messages.html" class="nav-link">
-                <img src="wireframe/message-icon.png" alt="Messages">
+                <img src="assets/icons/message-icon.svg" alt="Messages">
                 <span>Messages</span>
             </a>
             <a href="new-listing.html" class="nav-link add-btn">
-                <img src="wireframe/add-icon.png" alt="Ajouter">
+                <img src="assets/icons/add-icon.svg" alt="Ajouter">
             </a>
-            <a href="favorites.html" class="nav-link">
-                <img src="wireframe/fav-icon.png" alt="Favoris">
+            <a href="favorites.html" class="nav-link active">
+                <img src="assets/icons/fav-icon.svg" alt="Favoris">
                 <span>Favoris</span>
             </a>
             <a href="profile.html" class="nav-link">
-                <img src="wireframe/user-icon.png" alt="Profil">
+                <img src="assets/icons/user-icon.svg" alt="Profil">
                 <span>Profil</span>
             </a>
         </nav>
     </div>
+    <script src="js/favorites.js"></script>
 </body>
 </html>
