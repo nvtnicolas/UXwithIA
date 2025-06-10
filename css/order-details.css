@@ -1,0 +1,174 @@
+
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css/order-details.css */
+
+/* Conteneur principal et styles globaux */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header (déjà présent et harmonisé dans style commun) */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Main contenu scrollable */
+main {
+    flex: 1 1 auto;
+    padding: 16px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    /* Pas de barre de navigation selon le wireframe */
+}
+
+/* Détails de la commande */
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Produit */
+.product-card {
+    display: flex;
+    align-items: center;
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.product-info h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: #654bb6;
+}
+.product-price {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Section "Statut" */
+.detail-section h3 {
+    font-size: 1rem;
+    color: #654bb6;
+    margin-bottom: 12px;
+}
+.status-track {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.status-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.status-step .status-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+.status-step.completed .status-dot {
+    background-color: #5f4bb6;
+}
+.status-step.active .status-dot {
+    background-color: #ffc107;
+}
+.status-info {
+    display: flex;
+    flex-direction: column;
+}
+.status-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #654bb6;
+}
+.status-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Sections de détails de livraison et récapitulatif */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.detail-row:last-child {
+    border-bottom: none;
+}
+.detail-label {
+    font-size: 0.9rem;
+    color: #654bb6;
+}
+.detail-value {
+    font-size: 0.9rem;
+    color: #666;
+}
+.detail-row.total {
+    font-weight: 600;
+}
+
+/* Boutons d'action */
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #5f4bb6;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+}
+.button:hover {
+    background: #4a3991;
+}
+.button.button-secondary {
+    background: #f0eeff;
+    color: #5f4bb6;
+    border: 1px solid #d1c7f7;
+}
+.button.button-secondary:hover {
+    background: #e2dbfa;
+}

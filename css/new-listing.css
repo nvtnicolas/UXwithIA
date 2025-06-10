@@ -1,0 +1,119 @@
+
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css/new-listing.css */
+
+/* Utilise la structure globale issue de style.css et ajuste les composants spécifiques à cette page */
+
+/* Section header déjà gérée dans style.css (structure en 3 colonnes) */
+
+/* Formulaire de création d'annonce */
+.form-page {
+    padding: 1rem;
+    padding-bottom: 120px; /* Espace pour la barre de navigation */
+}
+
+/* Section Photos */
+.photo-upload-container {
+    margin-bottom: 1.5rem;
+}
+
+.photo-upload {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-placeholder {
+    width: 80px;
+    height: 80px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload-placeholder img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.upload-placeholder span {
+    font-size: 0.75rem;
+    color: #5F4BB6;
+}
+
+/* Conteneur d'aperçu des photos */
+.photo-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.photo-preview-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Section Titre et autres champs du formulaire */
+/* Les styles globaux des inputs, select et textarea sont définis dans style.css */
+
+/* Compteur de caractères pour la description */
+.char-counter {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Section conditions (radio-group) */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+    color: #5F4BB6;
+}
+
+/* Section Options de livraison - checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #5F4BB6;
+}
+
+/* Section Prix */
+.price-input {
+    display: flex;
+    align-items: center;
+}
+
+.price-input input[type="number"] {
+    flex: 1;
+}
+
+.price-currency {
+    margin-left: 8px;
+    font-size: 1rem;
+    color: #5F4BB6;
+}
+
+/* Bouton de soumission - déjà géré par le style commun via .button */

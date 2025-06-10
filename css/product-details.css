@@ -1,0 +1,228 @@
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header fixe */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Main contenu */
+main.product-page {
+    flex: 1 1 auto;
+    padding: 16px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Section images du produit */
+.product-images {
+    margin-bottom: 16px;
+}
+.main-product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.product-thumbnails {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+.product-thumbnails .thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.product-thumbnails .thumbnail.active,
+.product-thumbnails .thumbnail:hover {
+    opacity: 1;
+}
+
+/* Informations du produit */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-title {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #654bb6;
+}
+.icon-only-btn.favorite-btn img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Prix, localisation et date */
+.product-price,
+.product-location,
+.product-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Description */
+.product-description h3 {
+    font-size: 1rem;
+    color: #654bb6;
+    margin-bottom: 4px;
+}
+.product-description p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Information vendeur */
+.seller-info h3 {
+    font-size: 1rem;
+    color: #654bb6;
+    margin-bottom: 8px;
+}
+.seller-profile {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+.seller-profile .user-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.seller-profile div {
+    display: flex;
+    flex-direction: column;
+}
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #654bb6;
+}
+.user-rating {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Boutons d'actions produit */
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+}
+.button:hover {
+    background: #4a3991;
+}
+.button:not(.button-secondary) {
+    background: #5f4bb6;
+    color: #fff;
+}
+.button.button-secondary {
+    background: #f0eeff;
+    color: #5f4bb6;
+    border: 1px solid #d1c7f7;
+}
+.button.button-secondary:hover {
+    background: #e2dbfa;
+}
+
+/* Barre de navigation fixe */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}
+.bottom-nav .nav-link:hover,
+.bottom-nav .nav-link.active {
+    background: #f0eeff;
+}

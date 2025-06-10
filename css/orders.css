@@ -1,0 +1,185 @@
+/* Conteneur principal et mise en page globale */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header fixe */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+.notification-icon {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+}
+.notification-icon img {
+    width: 24px;
+    height: 24px;
+}
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ff5252;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main contenu */
+main {
+    flex: 1 1 auto;
+    padding: 16px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 80px; /* Pour laisser un espace sous le contenu */
+}
+
+/* Onglets de filtre */
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background: #f0eeff;
+    color: #654bb6;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.tab-btn.active {
+    background: #654bb6;
+    color: #fff;
+}
+
+/* Liste des commandes */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Article commande */
+.order-item {
+    display: flex;
+    align-items: center;
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+.order-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.order-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #654bb6;
+}
+.order-price {
+    font-size: 0.9rem;
+    color: #666;
+}
+.order-status {
+    font-size: 0.85rem;
+    color: #888;
+}
+.order-status.pending {
+    color: #5f4bb6; /* Couleur spécifique pour les commandes en cours */
+}
+.order-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Barre de navigation fixe */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}
+.bottom-nav .nav-link:hover,
+.bottom-nav .nav-link.active {
+    background: #f0eeff;
+}

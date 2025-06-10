@@ -1,0 +1,281 @@
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Main contenu */
+main {
+    flex: 1 1 auto;
+    padding: 16px;
+    padding-bottom: 80px; /* Espace ajouté pour que la barre des tâches ne masque pas le contenu */
+    box-sizing: border-box;
+}
+
+/* Profil header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.profile-header .profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+.profile-header h2 {
+    font-size: 1.2rem;
+    color: #654bb6;
+    margin: 0;
+}
+.user-rating {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Actions du profil vendeur */
+.profile-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 16px 0;
+}
+.profile-actions .button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    color: #fff;
+}
+.button.button-secondary {
+    background: #f0eeff;
+    color: #5f4bb6;
+    border: 1px solid #d1c7f7;
+}
+.button.button-secondary:hover {
+    background: #e2dbfa;
+}
+.button:not(.button-secondary) {
+    background: #5f4bb6;
+}
+.button:hover {
+    background: #4a3991;
+}
+.button .button-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Profil statistiques */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #654bb6;
+}
+.stat-label {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Onglets */
+.tab-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background: #f0eeff;
+    color: #654bb6;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.tab-btn.active {
+    background: #654bb6;
+    color: #fff;
+}
+
+/* Seller listings */
+.seller-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.listing {
+    display: flex;
+    align-items: center;
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+}
+.listing:hover {
+    background: #f0eeff;
+}
+.listing-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.listing-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.listing-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #654bb6;
+}
+.listing-price {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Bouton favori dans listings */
+.icon-only-btn.favorite-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.icon-only-btn.favorite-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Barre de navigation fixe */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.bottom-nav .nav-link:hover,
+.bottom-nav .nav-link.active {
+    background: #f0eeff;
+}
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Styles pour le conteneur d'avis */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Carte d'un avis */
+.review-card {
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.review-card:hover {
+    background: #f0eeff;
+}
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #654bb6;
+    margin-bottom: 8px;
+}
+.review-rating {
+    font-size: 0.9rem;
+    color: #f39c12;
+}
+.review-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+.review-text {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+}

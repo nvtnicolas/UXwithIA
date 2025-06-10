@@ -1,0 +1,240 @@
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.25rem;
+}
+.notification-icon {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+}
+.notification-icon img {
+    width: 24px;
+    height: 24px;
+}
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ff5252;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main contenu */
+main {
+    flex: 1 1 auto;
+    padding: 16px;
+    padding-bottom: 80px;  /* Ajouté pour éviter que le contenu ne soit caché */
+    box-sizing: border-box;
+}
+
+/* Search Container */
+.search-container {
+    margin-bottom: 16px;
+}
+.search-bar {
+    display: flex;
+    gap: 8px;
+    background: #faf8ff;
+    padding: 8px;
+    border-radius: 8px;
+    align-items: center;
+}
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+.icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Bouton Filtres */
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #f0eeff;
+    color: #654bb6;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.filter-btn:hover {
+    background: #e2dbfa;
+}
+.filter-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Catégorie Filter */
+.category-filter {
+    margin: 16px 0;
+    overflow-x: auto;
+}
+.filter-scroll {
+    display: flex;
+    gap: 8px;
+}
+.category-chip {
+    flex: none;
+    padding: 8px 12px;
+    background: #faf8ff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #654bb6;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.category-chip.active,
+.category-chip:hover {
+    background: #f0eeff;
+}
+
+/* Search Results (Listings) */
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.listing {
+    display: flex;
+    align-items: center;
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+.listing-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.listing-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.listing-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #654bb6;
+}
+.listing-price {
+    font-size: 0.9rem;
+    color: #666;
+}
+.listing-location {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Bouton favoris dans listing */
+.icon-only-btn.favorite-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.icon-only-btn.favorite-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Barre de navigation fixe */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 414px;
+    margin: 0 auto;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+.bottom-nav .nav-link {
+    flex: 1;
+    text-decoration: none;
+    color: #654bb6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+}
+.bottom-nav .nav-link img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+.bottom-nav .nav-link.active,
+.bottom-nav .nav-link:hover {
+    background: #f0eeff;
+}
+.bottom-nav .add-btn {
+    background: #5f4bb6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-nav .add-btn img {
+    width: 28px;
+    height: 28px;
+}

@@ -1,0 +1,94 @@
+/* filepath: c:\Users\nicol\OneDrive\Documents\B2 INFO\UX Design\css/settings.css */
+
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Main contenu */
+main {
+    flex: 1;
+    padding: 16px;
+    padding-bottom: 80px; /* espace ajouté pour éviter que le contenu soit masqué */
+    box-sizing: border-box;
+}
+
+/* Groupe de réglages */
+.settings-group {
+    margin-bottom: 24px;
+}
+
+/* Titre de groupe */
+.settings-group h3 {
+    font-size: 1rem;
+    color: #654bb6;
+    margin-bottom: 12px;
+}
+
+/* Élément de réglage */
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf8ff;
+    padding: 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #654bb6;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.settings-item:hover {
+    background: #f0eeff;
+}
+
+/* Icône flèche */
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Bouton danger (déconnexion) */
+.button.button-danger {
+    display: block;
+    text-align: center;
+    background: #ff5252;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.button.button-danger:hover {
+    background: #e04848;
+}

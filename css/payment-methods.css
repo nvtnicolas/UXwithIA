@@ -1,0 +1,129 @@
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header fixe */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+.back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Main contenu */
+main {
+    flex: 1 1 auto;
+    padding: 16px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+}
+
+/* Liste des moyens de paiement */
+.payment-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Carte de moyen de paiement */
+.payment-method {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf8ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+.payment-method-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.payment-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.payment-method-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.card-number {
+    font-weight: 600;
+    color: #654bb6;
+    font-size: 0.9rem;
+}
+.card-expiry {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Actions sur chaque moyen de paiement */
+.payment-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.default-badge {
+    background: #5f4bb6;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.icon-only-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Bouton Ajouter moyen de paiement */
+.add-payment-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #5f4bb6;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    gap: 8px;
+    transition: background 0.2s;
+}
+.add-payment-btn:hover {
+    background: #4a3991;
+}
+.button-icon {
+    width: 20px;
+    height: 20px;
+}/* Réduction de la taille de l'icône "more" */
+.icon-only-btn img {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,103 @@
+/* Conteneur principal */
+.app-container {
+    max-width: 414px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background: #654bb6;
+    color: #fff;
+    padding: 16px;
+}
+header .back-btn img {
+    width: 28px;
+    height: 28px;
+}
+header h1 {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Main contenu */
+main {
+    flex: 1 1 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Barre de recherche de catégorie */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #faf8ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+.icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Liste des catégories */
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #faf8ff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+}
+.category-item:hover {
+    background: #f0eeff;
+}
+.category-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+.category-item span {
+    flex: 1;
+    font-size: 1rem;
+    color: #654bb6;
+}
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+}
